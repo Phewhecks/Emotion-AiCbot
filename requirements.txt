@@ -1,0 +1,6 @@
+streamlit
+transformers
+torch
+langgraph
+langchain
+python-dotenv
