@@ -1,69 +1,76 @@
 # Emotion-Based AI Chatbot
 
-This is my AI chatbot project that detects emotions in text and gives replies based on what the user might be feeling. It uses a Hugging Face model and runs everything through a LangGraph pipeline. I used Streamlit for the interface to make it easy to test.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&style=flat-square)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-## What It Does
+This project is an intelligent chatbot that **detects user emotions** and provides **emotionally-aware responses** using NLP techniques and a modular pipeline.
 
-- Detects emotions like anger, joy, sadness, etc. using a pre-trained model
-- Remembers stuff from earlier in the chat (memory node)
-- Adds personality/context to responses (PCI node)
-- Has a simple UI with Streamlit
-- Modular setup using LangGraph (easy to test and extend)
+---
 
-## Folder Structure
+## Features
+
+- Emotion detection using a Hugging Face transformer model  
+- Modular LangGraph-based pipeline  
+- Persistent chat memory with JSON  
+- Persona/context injection (PCI node)  
+- Streamlit frontend for interactive chat testing  
+
+---
+
+## Installation
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Phewhecks/Emotion-AiCbot.git
+   cd Emotion-AiCbot
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r Ai_proj/requirements.txt
+   ```
+3. Run the chatbot:
+   ```bash
+   streamlit run Ai_proj/app.py
+   ```
+
+---
+
+## Project Structure
 
 ```
-Ai_proj/
-├── app.py                   # Streamlit UI
-├── chat_history.json        # Memory stored here
-├── requirements.txt         # All needed libraries
-└── langgraph_pipeline/
-    ├── emotion_node.py      # Detects emotion from input
-    ├── memory_node.py       # Adds memory context
-    ├── pci_node.py          # Injects personality/context
-    ├── action_node.py       # Handles the final response
-    └── graph_builder.py     # Builds the LangGraph pipeline
+Emotion-AiCbot/
+└── Ai_proj/
+    ├── app.py                      # Streamlit chatbot UI
+    ├── chat_history.json           # Chat memory store
+    ├── requirements.txt            # Python dependencies
+    ├── langgraph_pipeline/         # Modular node architecture
+    │   ├── emotion_node.py
+    │   ├── memory_node.py
+    │   ├── pci_node.py
+    │   ├── action_node.py
+    │   └── graph_builder.py
+    ├── report/                     # Documentation & diagram
+    │   ├── Emotion_Chatbot_Report_Front_Page.docx
+    │   ├── Final_Emotion_Chatbot_Report.docx
+    │   └── EmotionChatbotPipeline_Restored.png
+    └── README.md                   # Project overview
 ```
 
-## To Run
-
-1. Install the requirements:
-
-```
-pip install -r requirements.txt
-```
-
-2. Start the app:
-
-```
-streamlit run app.py
-```
-
-That’s it. The UI opens in your browser and you can test the chatbot there.
-
-## Tech Used
-
-- Python
-- Streamlit
-- LangGraph
-- Hugging Face Transformers
-- Pretrained model: j-hartmann/emotion-english-distilroberta-base
-
-## Diagram
-
-I made the architecture using draw.io — check the CSV or the figure included in the report.
+---
 
 ## Demo
 
-There's a screen recording showing:
-- How the UI works
-- Chatting with different emotions
-- How the response changes based on emotion
+[Watch Demo Video on YouTube](https://youtu.be/AFgMKiEY4QE)
+: https://youtu.be/AFgMKiEY4QE 
+---
 
-## Notes
+## License
 
-This was fun to build. Modular pipelines make stuff easy to debug. Emotion adds a human-like layer to chatbot replies. I learned a lot about combining models, logic, and UI.
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## Author
 
 Prabin Shrestha
+prabinstha066@gmail.com
