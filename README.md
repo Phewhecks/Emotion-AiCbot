@@ -64,13 +64,10 @@ Emotion-AiCbot/
 : https://youtu.be/AFgMKiEY4QE 
 ---
 
-## License
 
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## Author
 
 Prabin Shrestha
-prabinstha066@gmail.com
